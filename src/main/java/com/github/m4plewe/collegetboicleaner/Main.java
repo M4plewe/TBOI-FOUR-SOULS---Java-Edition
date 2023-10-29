@@ -900,13 +900,13 @@ class FourSoulsGame {
 
         int players = sc.nextInt();
 
-        if (players == 1 || players >= 5) {
+        if (players <= 1 || players >= 5) {
 
             System.out.println("The game doesn't supports that many players");
 
         }else{
 
-            FourSoulsGame game = new FourSoulsGame(2);
+            FourSoulsGame game = new FourSoulsGame(players);
 
             // Start the game.
 
