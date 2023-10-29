@@ -62,6 +62,7 @@ class FourSoulsGame {
         Collections.shuffle(deck.cards);
 
         return deck;
+
     }
 
     private Deck initializeTreasureDeck() {
@@ -69,6 +70,7 @@ class FourSoulsGame {
 
         // Treasure Cards
         deck.addCard(new TreasureCard("Sausage: +1 Health +1 Damage", false, false));
+        deck.addCard(new TreasureCard("Brimstone: +1 Damage", false, false));
         deck.addCard(new TreasureCard("Sacred Heart: +2 Health and +1 Damage", false, false));
         deck.addCard(new TreasureCard("Dinner: +1 Health", false, false));
         deck.addCard(new TreasureCard("Lard: +2 Health", false, false));
@@ -86,7 +88,7 @@ class FourSoulsGame {
         deck.addCard(new TreasureCard("Host Hat: +2 Health", true, false));
         deck.addCard(new TreasureCard("Mystery Sack: Random effect (+1 Loot, +4$)", true, false));
         deck.addCard(new TreasureCard("Book of Sin: Random effect (+1 $, +1 Loot, +1 Heart)", true, false));
-        deck.addCard(new TreasureCard("Chaos Card: Defeat all monsters (Destroys on use)", true, false));
+        deck.addCard(new TreasureCard("Chaos Card: Change monster stats", true, false));
         deck.addCard(new TreasureCard("Battery Bum: Reactivate a used active card per 4$", true, false));
         deck.addCard(new TreasureCard("Dark Bum: Random effect (+3$, +1 Loot, -1 Health)", true, false));
         deck.addCard(new TreasureCard("Plan C: Defeat all monsters and u die with them (Destroys on use)", true, false));
@@ -492,7 +494,7 @@ class FourSoulsGame {
 
                             } else if (cardName.equals("Host Hat: +2 Health") && !selectedTreasureCard.Used) {
 
-                                currentPlayer.health += 1;
+                                currentPlayer.health += 2;
 
                                 selectedTreasureCard.Used = true;
 
@@ -546,19 +548,16 @@ class FourSoulsGame {
 
                                 selectedTreasureCard.Used = true;
 
-                            } else if (cardName.equals("Chaos Card: Defeat all monsters (Destroys on use)") && !selectedTreasureCard.Used) {
+                            } else if (cardName.equals("Chaos Card: Change monster stats") && !selectedTreasureCard.Used) {
 
                                 for (MonsterCard selectedMonster : monstersInPlay) {
 
-                                    monsterDefeated(currentPlayer, selectedMonster.defeat);
-
-                                    System.out.println("Destroyed with Chaos Card: " + selectedMonster.name);
-
-                                    monstersInPlay.remove(selectedMonster);
+                                    selectedMonster.health = (int) (1 + Math.random()*10);
+                                    selectedMonster.damage =  (int) (1 + Math.random()*10);
+                                    selectedMonster.evasion = (int) (1 + Math.random()*6);
 
                                 }
 
-                                currentPlayer.hand.remove(selectedTreasureCard);
 
                             } else if (cardName.equals("Battery Bum: Reactivate a used active card per 4$") && !selectedTreasureCard.Used) {
 
@@ -776,13 +775,13 @@ class FourSoulsGame {
                                         } else {
                                             // Attack missed
 
-                                            int dodge = (int) (Math.random() * 4); // Generate a random number between 0
+                                            int dodge = (int) (1 + Math.random() * 4); // Generate a random number between 0
                                             // and 3
 
                                             boolean playerHasDryBaby = false; // Initialize the flag as false
 
                                             for (Card treasureCard : currentPlayer.hand) {
-                                                if (treasureCard.name.equals("Dry Baby")) {
+                                                if (treasureCard.name.equals("Dry Baby: Blocks enemy attacks 25% chance")) {
                                                     playerHasDryBaby = true;
                                                     break; // You can exit the loop early since you've found "Dry Baby"
                                                 }
