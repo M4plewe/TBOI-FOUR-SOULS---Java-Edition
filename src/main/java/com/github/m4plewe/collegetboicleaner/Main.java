@@ -171,97 +171,96 @@ class FourSoulsGame {
 
     public void monsterDefeated(Player player, String monsterDefeatString) {
 
-        switch (monsterDefeatString) {
-            case "BlackBonyDefeat" -> {
-                player.coins += 2;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
+        if (monsterDefeatString.equals("BlackBonyDefeat")) {
+            player.coins += 2;
+            if (!treasureDeck.cards.isEmpty()) {
+                TreasureCard item = treasureDeck.drawTreasure();
+                player.hand.add(item);
+                // Handle the treasure card as needed
             }
-            case "BoomFlyDefeat" -> player.souls += 1;
-            case "ClottyDefeat" -> {
-                player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
+        } else if (monsterDefeatString.equals("BoomFlyDefeat")) {
+            player.souls += 1;
+        } else if (monsterDefeatString.equals("ClottyDefeat")) {
+            player.coins += 1;
+            if (!treasureDeck.cards.isEmpty()) {
+                TreasureCard item = treasureDeck.drawTreasure();
+                player.hand.add(item);
+                // Handle the treasure card as needed
             }
-            case "BigSpiderDefeat" -> {
-                player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
+        } else if (monsterDefeatString.equals("BigSpiderDefeat")) {
+            player.coins += 1;
+            if (!treasureDeck.cards.isEmpty()) {
+                TreasureCard item = treasureDeck.drawTreasure();
+                player.hand.add(item);
+                // Handle the treasure card as needed
             }
-            case "CodWormDefeat" -> player.souls += 1;
-            case "ConjoinedFattyDefeat" -> player.souls += 1;
-            case "DankGlobinDefeat" -> {
-                player.coins += 2;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
+        } else if (monsterDefeatString.equals("CodWormDefeat")) {
+            player.souls += 1;
+        } else if (monsterDefeatString.equals("ConjoinedFattyDefeat")) {
+            player.souls += 1;
+        } else if (monsterDefeatString.equals("DankGlobinDefeat")) {
+            player.coins += 2;
+            if (!treasureDeck.cards.isEmpty()) {
+                TreasureCard item = treasureDeck.drawTreasure();
+                player.hand.add(item);
+                // Handle the treasure card as needed
             }
-            case "DingaDefeat" -> player.souls += 2;
-            case "DipDefeat" -> {
-                player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
+        } else if (monsterDefeatString.equals("DingaDefeat")) {
+            player.souls += 2;
+        } else if (monsterDefeatString.equals("DipDefeat")) {
+            player.coins += 1;
+            if (!treasureDeck.cards.isEmpty()) {
+                TreasureCard item = treasureDeck.drawTreasure();
+                player.hand.add(item);
+                // Handle the treasure card as needed
             }
-            case "DopleDefeat" -> player.souls += 2;
-            case "EvilTwinDefeat" -> {
-                player.coins += 2;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
+        } else if (monsterDefeatString.equals("DopleDefeat")) {
+            player.souls += 2;
+        } else if (monsterDefeatString.equals("EvilTwinDefeat")) {
+            player.coins += 2;
+            if (!treasureDeck.cards.isEmpty()) {
+                TreasureCard item = treasureDeck.drawTreasure();
+                player.hand.add(item);
+                // Handle the treasure card as needed
             }
-            case "FatBatDefeat" -> player.souls += 1;
-            case "FattyDefeat" -> {
-                player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
+        } else if (monsterDefeatString.equals("FatBatDefeat")) {
+            player.souls += 1;
+        } else if (monsterDefeatString.equals("FattyDefeat")) {
+            player.coins += 1;
+            if (!treasureDeck.cards.isEmpty()) {
+                TreasureCard item = treasureDeck.drawTreasure();
+                player.hand.add(item);
+                // Handle the treasure card as needed
             }
-            case "FlyDefeat" -> player.souls += 1;
-            case "GreedlingDefeat" -> {
-                player.coins += 2;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
+        } else if (monsterDefeatString.equals("FlyDefeat")) {
+            player.souls += 1;
+        } else if (monsterDefeatString.equals("GreedlingDefeat")) {
+            player.coins += 2;
+            if (!treasureDeck.cards.isEmpty()) {
+                TreasureCard item = treasureDeck.drawTreasure();
+                player.hand.add(item);
+                // Handle the treasure card as needed
             }
-            case "HangerDefeat" -> player.souls += 1;
-            case "HopperDefeat" -> {
-                player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
+        } else if (monsterDefeatString.equals("HangerDefeat")) {
+            player.souls += 1;
+        } else if (monsterDefeatString.equals("HopperDefeat")) {
+            player.coins += 1;
+            if (!treasureDeck.cards.isEmpty()) {
+                TreasureCard item = treasureDeck.drawTreasure();
+                player.hand.add(item);
+                // Handle the treasure card as needed
             }
-            case "HorfDefeat" -> player.souls += 1;
-            case "KeeperHeadDefeat" -> {
-                player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
+        } else if (monsterDefeatString.equals("HorfDefeat")) {
+            player.souls += 1;
+        } else if (monsterDefeatString.equals("KeeperHeadDefeat")) {
+            player.coins += 1;
+            if (!treasureDeck.cards.isEmpty()) {
+                TreasureCard item = treasureDeck.drawTreasure();
+                player.hand.add(item);
+                // Handle the treasure card as needed
             }
-            case "LeaperDefeat" -> player.souls += 2;
+        } else if (monsterDefeatString.equals("LeaperDefeat")) {
+            player.souls += 2;
         }
         // Add more cases for other monsters' defeat strings and item rewards as needed.
     }
@@ -405,16 +404,6 @@ class FourSoulsGame {
 
                                     currentPlayer.damage = 999;
 
-                                }else if (RandomPandora == 4){
-
-                                    for (int i = 0; i < 3; i++) {
-
-                                        LootCard card = lootDeck.drawLoot();
-
-                                        currentPlayer.hand.add(card);
-
-                                    }
-
                                 } else if (RandomPandora == 5) {
 
                                     currentPlayer.coins += 9;
@@ -439,7 +428,7 @@ class FourSoulsGame {
 
                             } else if (cardName.equals("Host Hat") && !selectedTreasureCard.Used) {
 
-                                currentPlayer.health += 2;
+                                currentPlayer.health += 1;
 
                                 selectedTreasureCard.Used = true;
 
@@ -453,7 +442,7 @@ class FourSoulsGame {
 
                                     currentPlayer.hand.add(card);
 
-                                } else {
+                                } else if (RandomMysterySack >= 3) {
 
                                     currentPlayer.coins += 4;
 
@@ -475,7 +464,7 @@ class FourSoulsGame {
 
                                     currentPlayer.hand.add(card);
 
-                                } else {
+                                } else if (RandomBookOfSin >= 5) {
 
                                     currentPlayer.health += 1;
 
@@ -551,7 +540,7 @@ class FourSoulsGame {
 
                                     currentPlayer.hand.add(card);
 
-                                } else {
+                                } else if (RandomDarkBum >= 5) {
 
                                     currentPlayer.health -= 1;
 
@@ -667,7 +656,7 @@ class FourSoulsGame {
 
                     case 4:
                         // Attack a monster
-                        if (!monstersInPlay.isEmpty()) {
+                        if (monstersInPlay.size() > 0) {
                             if (currentPlayer.hadFoughtAnEnemie) {
                                 System.out.println(
                                         "You've already fought an enemy this turn. You cannot attack another enemy.");
