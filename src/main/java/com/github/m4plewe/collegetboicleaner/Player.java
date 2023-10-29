@@ -17,7 +17,7 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
-        this.coins = 3; // Starting coins
+        this.coins = 3000; // Starting coins
         this.health = 2;
         this.damage = 1;
         this.hand = new ArrayList<>();

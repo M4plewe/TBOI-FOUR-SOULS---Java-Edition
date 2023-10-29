@@ -436,13 +436,13 @@ class FourSoulsGame {
                                     .get(cardIndexToActivate - 1);
                             String cardName = selectedTreasureCard.name;
 
-                            if (cardName.equals("The Chest") && !selectedTreasureCard.Used) {
+                            if (cardName.equals("The Chest: Gain a Soul (Destroys on use)") && !selectedTreasureCard.Used) {
 
                                 currentPlayer.souls += 1;
 
                                 currentPlayer.hand.remove(selectedTreasureCard);
 
-                            } else if (cardName.equals("Pandora's Box") && !selectedTreasureCard.Used) {
+                            } else if (cardName.equals("Pandora's Box: Random effect (+1$, +6$, +999 damage, +3 Loot, +9$, +1 Souls (Destroys on use))") && !selectedTreasureCard.Used) {
 
                                 int RandomPandora = (int) (1 + Math.random() * 6);
 
@@ -482,7 +482,7 @@ class FourSoulsGame {
 
                                 selectedTreasureCard.Used = true;
 
-                            } else if (cardName.equals("The Battery") && !selectedTreasureCard.Used) {
+                            } else if (cardName.equals("The Battery: Reset turn effects (can use loot, shop and fight again)") && !selectedTreasureCard.Used) {
 
                                 currentPlayer.boughtItemThisTurn = false;
                                 currentPlayer.hadFoughtAnEnemie = false;
@@ -490,13 +490,13 @@ class FourSoulsGame {
 
                                 selectedTreasureCard.Used = true;
 
-                            } else if (cardName.equals("Host Hat") && !selectedTreasureCard.Used) {
+                            } else if (cardName.equals("Host Hat: +2 Health") && !selectedTreasureCard.Used) {
 
                                 currentPlayer.health += 1;
 
                                 selectedTreasureCard.Used = true;
 
-                            } else if (cardName.equals("Mystery Sack") && !selectedTreasureCard.Used) {
+                            } else if (cardName.equals("Mystery Sack: Random effect (+1 Loot, +4$)") && !selectedTreasureCard.Used) {
 
                                 int RandomMysterySack = (int) (1 + Math.random() * 6);
 
@@ -518,7 +518,7 @@ class FourSoulsGame {
 
                                 selectedTreasureCard.Used = true;
 
-                            } else if (cardName.equals("Book of Sin") && !selectedTreasureCard.Used) {
+                            } else if (cardName.equals("Book of Sin: Random effect (+1 $, +1 Loot, +1 Heart)") && !selectedTreasureCard.Used) {
 
                                 int RandomBookOfSin = (int) (1 + Math.random() * 6);
 
@@ -546,7 +546,7 @@ class FourSoulsGame {
 
                                 selectedTreasureCard.Used = true;
 
-                            } else if (cardName.equals("Chaos Card") && !selectedTreasureCard.Used) {
+                            } else if (cardName.equals("Chaos Card: Defeat all monsters (Destroys on use)") && !selectedTreasureCard.Used) {
 
                                 for (MonsterCard selectedMonster : monstersInPlay) {
 
@@ -560,7 +560,7 @@ class FourSoulsGame {
 
                                 currentPlayer.hand.remove(selectedTreasureCard);
 
-                            } else if (cardName.equals("Battery Bum") && !selectedTreasureCard.Used) {
+                            } else if (cardName.equals("Battery Bum: Reactivate a used active card per 4$") && !selectedTreasureCard.Used) {
 
                                 if (currentPlayer.coins >= 4) {
 
@@ -600,7 +600,7 @@ class FourSoulsGame {
 
                                 }
 
-                            } else if (cardName.equals("Dark Bum") && !selectedTreasureCard.Used) {
+                            } else if (cardName.equals("Dark Bum: Random effect (+3$, +1 Loot, -1 Health)") && !selectedTreasureCard.Used) {
 
                                 int RandomDarkBum = (int) (1 + Math.random() * 6);
 
@@ -633,7 +633,7 @@ class FourSoulsGame {
 
                                 selectedTreasureCard.Used = true;
 
-                            } else if (cardName.equals("Plan C") && !selectedTreasureCard.Used) {
+                            } else if (cardName.equals("Plan C: Defeat all monsters and u die with them (Destroys on use)") && !selectedTreasureCard.Used) {
 
                                 for (MonsterCard selectedMonster : monstersInPlay) {
 
