@@ -450,21 +450,31 @@ class FourSoulsGame {
 
                                     currentPlayer.coins += 1;
 
+                                    System.out.println("Player got +1 coin");
+
                                 } else if (RandomPandora == 2) {
 
                                     currentPlayer.coins += 6;
+
+                                    System.out.println("Player got +6 coins");
 
                                 } else if (RandomPandora == 3) {
 
                                     currentPlayer.damage = 999;
 
+                                    System.out.println("Player got +999 damage");
+
                                 } else if (RandomPandora == 5) {
 
                                     currentPlayer.coins += 9;
 
+                                    System.out.println("Player got +9 coins");
+
                                 } else if (RandomPandora == 6) {
 
                                     currentPlayer.souls += 1;
+
+                                    System.out.println("Player got +1 souls, item destroyed");
 
                                     currentPlayer.hand.remove(selectedTreasureCard);
 
@@ -496,9 +506,13 @@ class FourSoulsGame {
 
                                     currentPlayer.hand.add(card);
 
+                                    System.out.println("Player got +1 Loot");
+
                                 } else if (RandomMysterySack >= 3) {
 
                                     currentPlayer.coins += 4;
+
+                                    System.out.println("Player got +4 coins");
 
                                 }
 
@@ -512,15 +526,21 @@ class FourSoulsGame {
 
                                     currentPlayer.coins += 1;
 
+                                    System.out.println("Player got +1 coin");
+
                                 } else if (RandomBookOfSin == 3 || RandomBookOfSin == 4) {
 
                                     Card card = lootDeck.draw();
 
                                     currentPlayer.hand.add(card);
 
+                                    System.out.println("Player got +1 Loot");
+
                                 } else if (RandomBookOfSin >= 5) {
 
                                     currentPlayer.health += 1;
+
+                                    System.out.println("Player got +1 Health");
 
                                 }
 
@@ -588,15 +608,26 @@ class FourSoulsGame {
 
                                     currentPlayer.coins += 3;
 
+                                    System.out.println("Player got +3 coins");
+
                                 } else if (RandomDarkBum == 3 || RandomDarkBum == 4) {
 
                                     Card card = lootDeck.draw();
 
                                     currentPlayer.hand.add(card);
 
+                                    System.out.println("Player got +1 loot");
+
                                 } else if (RandomDarkBum >= 5) {
 
                                     currentPlayer.health -= 1;
+
+                                    System.out.println("Player got hurt -1 health");
+
+                                    if (currentPlayer.health <= 0){
+
+                                        endTurn = true;
+                                    }
 
                                 }
 

@@ -104,7 +104,7 @@
       <updated>1698542371566</updated>
       <workItem from="1698542372565" duration="1263000" />
       <workItem from="1698545025557" duration="2658000" />
-      <workItem from="1698547715061" duration="2573000" />
+      <workItem from="1698547715061" duration="3293000" />
     </task>
     <task id="LOCAL-00001" summary="Make the cards also have a little description for new players or ppl that have never played the game knwo what the cards do, also i changed what some cards do due that i changed their original function lol">
       <option name="closed" value="true" />
@@ -186,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698549222707</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary=".">
+      <option name="closed" value="true" />
+      <created>1698550608972</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1698550608972</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,5 +215,10 @@
     <MESSAGE value="Make the cards also have a little description for new players or ppl that have never played the game knwo what the cards do, also i changed what some cards do due that i changed their original function lol" />
     <MESSAGE value="." />
     <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CollageTBOICleaner$FourSoulsGame.ic" NAME="FourSoulsGame Coverage Results" MODIFIED="1698550641984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.m4plewe.collegetboicleaner.*</FILTER>
+    </SUITE>
   </component>
 </project>
