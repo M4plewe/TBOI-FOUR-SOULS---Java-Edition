@@ -11,6 +11,8 @@ class FourSoulsGame {
 
     public FourSoulsGame(int numPlayers) {
 
+        int numCartas = numPlayers;
+
         Scanner sc = new Scanner(System.in);
 
         players = new ArrayList<>();
@@ -27,7 +29,7 @@ class FourSoulsGame {
 
         treasureDeck = initializeTreasureDeck();
         monsterDeck = initializeMonsterDeck();
-        lootDeck = initializeLootDeck();
+        lootDeck = initializeLootDeck(numCartas);
 
         shopItems = new ArrayList<>();
         monstersInPlay = new ArrayList<>();
@@ -95,7 +97,7 @@ class FourSoulsGame {
         return deck;
     }
 
-    private Deck initializeLootDeck() {
+    private Deck initializeLootDeck(int numCartas) {
 
         Deck deck = new Deck();
 
@@ -138,10 +140,47 @@ class FourSoulsGame {
         deck.addCard(new LootCard("Credit Card (+10 coins)", "", "creditCard", false));
         deck.addCard(new LootCard("Jera ( +1-3 Damage, +1-3 Health, +1-5 Coins)", "", "jera", false));
         deck.addCard(new LootCard("Soul Heart (+2 Health)", "", "soulHeart", false));
+        deck.addCard(new LootCard("A Penny! (Self explanatory)", "", "aPenny", false));
+        deck.addCard(new LootCard("2 Cents! (Self explanatory)", "", "twoCents", false));
+        deck.addCard(new LootCard("3 Cents! (Self explanatory)", "", "threeCents", false));
+        deck.addCard(new LootCard("4 Cents! (Self explanatory)", "", "fourCents", false));
+        deck.addCard(new LootCard("Bomb (+1 Damage this turn)", "", "bomb", false));
+        deck.addCard(new LootCard("Charged Penny (+1 Coin and Reset turn effects (can use loot, shop and fight again)", "", "chargedPenny", false));
+        deck.addCard(new LootCard("Credit Card (+10 coins)", "", "creditCard", false));
+        deck.addCard(new LootCard("Jera ( +1-3 Damage, +1-3 Health, +1-5 Coins)", "", "jera", false));
+        deck.addCard(new LootCard("Soul Heart (+2 Health)", "", "soulHeart", false));
+        deck.addCard(new LootCard("A Penny! (Self explanatory)", "", "aPenny", false));
+        deck.addCard(new LootCard("2 Cents! (Self explanatory)", "", "twoCents", false));
+        deck.addCard(new LootCard("3 Cents! (Self explanatory)", "", "threeCents", false));
+        deck.addCard(new LootCard("4 Cents! (Self explanatory)", "", "fourCents", false));
+        deck.addCard(new LootCard("Bomb (+1 Damage this turn)", "", "bomb", false));
+        deck.addCard(new LootCard("Charged Penny (+1 Coin and Reset turn effects (can use loot, shop and fight again)", "", "chargedPenny", false));
+        deck.addCard(new LootCard("Credit Card (+10 coins)", "", "creditCard", false));
+        deck.addCard(new LootCard("Jera ( +1-3 Damage, +1-3 Health, +1-5 Coins)", "", "jera", false));
+        deck.addCard(new LootCard("Soul Heart (+2 Health)", "", "soulHeart", false));
+        deck.addCard(new LootCard("A Penny! (Self explanatory)", "", "aPenny", false));
+        deck.addCard(new LootCard("2 Cents! (Self explanatory)", "", "twoCents", false));
+        deck.addCard(new LootCard("3 Cents! (Self explanatory)", "", "threeCents", false));
+        deck.addCard(new LootCard("4 Cents! (Self explanatory)", "", "fourCents", false));
+        deck.addCard(new LootCard("Bomb (+1 Damage this turn)", "", "bomb", false));
+        deck.addCard(new LootCard("Charged Penny (+1 Coin and Reset turn effects (can use loot, shop and fight again)", "", "chargedPenny", false));
+        deck.addCard(new LootCard("Credit Card (+10 coins)", "", "creditCard", false));
+        deck.addCard(new LootCard("Jera ( +1-3 Damage, +1-3 Health, +1-5 Coins)", "", "jera", false));
+        deck.addCard(new LootCard("Soul Heart (+2 Health)", "", "soulHeart", false));
+        deck.addCard(new LootCard("A Penny! (Self explanatory)", "", "aPenny", false));
+        deck.addCard(new LootCard("2 Cents! (Self explanatory)", "", "twoCents", false));
+        deck.addCard(new LootCard("3 Cents! (Self explanatory)", "", "threeCents", false));
+        deck.addCard(new LootCard("4 Cents! (Self explanatory)", "", "fourCents", false));
+        deck.addCard(new LootCard("Bomb (+1 Damage this turn)", "", "bomb", false));
+        deck.addCard(new LootCard("Charged Penny (+1 Coin and Reset turn effects (can use loot, shop and fight again)", "", "chargedPenny", false));
+        deck.addCard(new LootCard("Credit Card (+10 coins)", "", "creditCard", false));
+        deck.addCard(new LootCard("Jera ( +1-3 Damage, +1-3 Health, +1-5 Coins)", "", "jera", false));
+        deck.addCard(new LootCard("Soul Heart (+2 Health)", "", "soulHeart", false));
+
 
         Collections.shuffle(deck.cards);
 
-        while (deck.cards.size() > 26) {
+        while (deck.cards.size() > (10*numCartas + 3*numCartas)) {
             deck.cards.remove(deck.cards.size() - 1);
         }
 
