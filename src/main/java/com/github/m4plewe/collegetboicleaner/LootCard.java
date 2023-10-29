@@ -21,40 +21,36 @@ public class LootCard extends Card {
             if (cardIndex >= 0 && cardIndex < player.hand.size()) {
                 Card selectedCard = player.hand.get(cardIndex);
 
-                if (selectedCard instanceof LootCard) {
-                    LootCard lootCard = (LootCard) selectedCard;
+                if (selectedCard instanceof LootCard lootCard) {
 
-                    if (lootCard.id.equals("aPenny")) {
-                        player.coins += 1;
-                    } else if (lootCard.id.equals("twoCents")) {
-                        player.coins += 2;
-                    } else if (lootCard.id.equals("threeCents")) {
-                        player.coins += 3;
-                    } else if (lootCard.id.equals("fourCents")) {
-                        player.coins += 4;
-                    } else if (lootCard.id.equals("bomb")) {
-                        player.damage += 1;
-                    } else if (lootCard.id.equals("chargedPenny")) {
-                        player.coins += 1;
-                        player.usedLootCardThisTurn = false;
-                        player.boughtItemThisTurn = false;
-                        player.hadFoughtAnEnemie = false;
-                    } else if (lootCard.id.equals("creditCard")) {
-                        player.coins += 10;
-                    } else if (lootCard.id.equals("jera")) {
-                        player.coins += 1 + Math.random() * 5;
-                        player.damage += Math.random() * 3;
-                        player.health += Math.random() * 3;
-                    } else if (lootCard.id.equals("soulHeart")) {
-                        player.health += 2;
-                    } else {
-                        System.out.println("Unknown loot card ID: " + lootCard.id);
+                    switch (lootCard.id) {
+                        case "aPenny" -> player.coins += 1;
+                        case "twoCents" -> player.coins += 2;
+                        case "threeCents" -> player.coins += 3;
+                        case "fourCents" -> player.coins += 4;
+                        case "bomb" -> player.damage += 1;
+                        case "chargedPenny" -> {
+                            player.coins += 1;
+                            player.boughtItemThisTurn = false;
+                            player.hadFoughtAnEnemie = false;
+                        }
+                        case "creditCard" -> player.coins += 10;
+                        case "jera" -> {
+                            player.coins += (int) (1 + Math.random() * 5);
+                            player.damage += (int) (Math.random() * 3);
+                            player.health += (int) (Math.random() * 3);
+                        }
+                        case "soulHeart" -> player.health += 2;
+                        default -> System.out.println("Unknown loot card ID: " + lootCard.id);
                     }
 
-                    player.hand.remove(cardIndex);
 
-                    // Set the flag to indicate that the player has used a Loot Card this turn
-                    player.usedLootCardThisTurn = true;
+                    if (!lootCard.id.equals("chargedPenny")) {
+                        player.hand.remove(cardIndex);
+                        player.usedLootCardThisTurn = true;
+                    }else{
+                        player.hand.remove(cardIndex);
+                    }
 
                 }
 

@@ -7,5 +7,6 @@ public class Card {
     public Card(String name, String type) {
         this.name = name;
         this.type = type;
+
     }
 }

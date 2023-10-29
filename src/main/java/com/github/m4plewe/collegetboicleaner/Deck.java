@@ -42,14 +42,4 @@ public class Deck {
         return null; // Return null if no monster cards are available.
     }
 
-    public LootCard drawLoot() {
-        if (!cards.isEmpty()) {
-            for (int i = cards.size() - 1; i >= 0; i--) {
-                if (cards.get(i) instanceof LootCard) {
-                    return (LootCard) cards.remove(i);
-                }
-            }
-        }
-        return null; // Return null if no loot cards are available.
-    }
 }

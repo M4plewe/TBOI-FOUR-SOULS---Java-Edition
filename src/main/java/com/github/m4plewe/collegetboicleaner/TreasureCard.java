@@ -4,7 +4,7 @@ public class TreasureCard extends Card {
     public boolean isActive;
     public boolean Used;
 
-    public TreasureCard(String name, boolean isActive, boolean Used) {
+    public TreasureCard(String name, boolean isActive) {
         super(name, "Treasure");
         this.isActive = isActive;
 
