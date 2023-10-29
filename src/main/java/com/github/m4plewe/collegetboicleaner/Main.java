@@ -64,31 +64,30 @@ class FourSoulsGame {
     private Deck initializeTreasureDeck() {
         Deck deck = new Deck();
 
-        // Treasure Deck:
+        // Treasure Cards
+        deck.addCard(new TreasureCard("Sausage: +1 Health +1 Damage", false, false));
+        deck.addCard(new TreasureCard("Sacred Heart: +2 Health and +1 Damage", false, false));
+        deck.addCard(new TreasureCard("Dinner: +1 Health", false, false));
+        deck.addCard(new TreasureCard("Lard: +2 Health", false, false));
+        deck.addCard(new TreasureCard("Dry Baby: Blocks enemy attacks 25% chance", false, false));
+        deck.addCard(new TreasureCard("Empty Vessel: +2 and +2 if less than 5 Cards on Hand else +1 Damage and +1 Coins per turn", false, false));
+        deck.addCard(new TreasureCard("Greed's Gullet: +3 coins each turn", false, false));
+        deck.addCard(new TreasureCard("Meat!: +1 Health", false, false));
+        deck.addCard(new TreasureCard("Synthoil: +1 Damage", false, false));
 
-        deck.addCard(new TreasureCard("Brimstone", false, false));
-        deck.addCard(new TreasureCard("Sausage", false, false));
-        deck.addCard(new TreasureCard("Sacred Heart", false, false));
-        deck.addCard(new TreasureCard("Dinner", false, false));
-        deck.addCard(new TreasureCard("Lard", false, false));
-        deck.addCard(new TreasureCard("Dry Baby", false, false));
-        deck.addCard(new TreasureCard("Empty Vessel", false, false));
-        deck.addCard(new TreasureCard("Greed's Gullet", false, false));
-        deck.addCard(new TreasureCard("Meat!", false, false));
-        deck.addCard(new TreasureCard("Synthoil", false, false));
+// Active Treasure Cards
 
-        // Active
+        deck.addCard(new TreasureCard("The Chest: Gain a Soul (Destroys on use)", true, false));
+        deck.addCard(new TreasureCard("Pandora's Box: Random effect (+1$, +6$, +999 damage, +3 Loot, +9$, +1 Souls (Destroys on use))", true, false));
+        deck.addCard(new TreasureCard("The Battery: Reset turn effects (can use loot, shop and fight again)", true, false));
+        deck.addCard(new TreasureCard("Host Hat: +2 Health", true, false));
+        deck.addCard(new TreasureCard("Mystery Sack: Random effect (+1 Loot, +4$)", true, false));
+        deck.addCard(new TreasureCard("Book of Sin: Random effect (+1 $, +1 Loot, +1 Heart)", true, false));
+        deck.addCard(new TreasureCard("Chaos Card: Defeat all monsters (Destroys on use)", true, false));
+        deck.addCard(new TreasureCard("Battery Bum: Reactivate a used active card per 4$", true, false));
+        deck.addCard(new TreasureCard("Dark Bum: Random effect (+3$, +1 Loot, -1 Health)", true, false));
+        deck.addCard(new TreasureCard("Plan C: Defeat all monsters and u die with them (Destroys on use)", true, false));
 
-        deck.addCard(new TreasureCard("The Chest", true, false));
-        deck.addCard(new TreasureCard("Pandora's Box", true, false));
-        deck.addCard(new TreasureCard("The Battery", true, false));
-        deck.addCard(new TreasureCard("Host Hat", true, false));
-        deck.addCard(new TreasureCard("Mystery Sack", true, false));
-        deck.addCard(new TreasureCard("Book of Sin", true, false));
-        deck.addCard(new TreasureCard("Chaos Card", true, false));
-        deck.addCard(new TreasureCard("Battery Bum", true, false));
-        deck.addCard(new TreasureCard("Dark Bum", true, false));
-        deck.addCard(new TreasureCard("Plan C", true, false));
 
         Collections.shuffle(deck.cards);
 
@@ -99,54 +98,45 @@ class FourSoulsGame {
 
         Deck deck = new Deck();
 
-        deck.addCard(new LootCard("A Penny!", "", "aPenny", false));
-        deck.addCard(new LootCard("2 Cents!", "", "twoCents", false));
-        deck.addCard(new LootCard("3 Cents!", "", "threeCents", false));
-        deck.addCard(new LootCard("4 Cents!", "", "fourCents", false));
-        deck.addCard(new LootCard("Bomb", "", "bomb", false));
-        deck.addCard(new LootCard("Charged Penny", "", "chargedPenny", false));
-        deck.addCard(new LootCard("Credit Card", "", "creditCard", false));
-        deck.addCard(new LootCard("Jera", "", "jera", false));
-        deck.addCard(new LootCard("Soul Heart", "", "soulHeart", false));
+        deck.addCard(new LootCard("A Penny! (Self explanatory)", "", "aPenny", false));
+        deck.addCard(new LootCard("2 Cents! (Self explanatory)", "", "twoCents", false));
+        deck.addCard(new LootCard("3 Cents! (Self explanatory)", "", "threeCents", false));
+        deck.addCard(new LootCard("4 Cents! (Self explanatory)", "", "fourCents", false));
+        deck.addCard(new LootCard("Bomb (+1 Damage this turn)", "", "bomb", false));
+        deck.addCard(new LootCard("Charged Penny (+1 Coin and Reset turn effects (can use loot, shop and fight again)", "", "chargedPenny", false));
+        deck.addCard(new LootCard("Credit Card (+10 coins)", "", "creditCard", false));
+        deck.addCard(new LootCard("Jera ( +1-3 Damage, +1-3 Health, +1-5 Coins)", "", "jera", false));
+        deck.addCard(new LootCard("Soul Heart (+2 Health)", "", "soulHeart", false));
 
         // Repitiendo para luego el shuffle
 
-        deck.addCard(new LootCard("A Penny!", "", "aPenny", false));
-        deck.addCard(new LootCard("2 Cents!", "", "twoCents", false));
-        deck.addCard(new LootCard("3 Cents!", "", "threeCents", false));
-        deck.addCard(new LootCard("4 Cents!", "", "fourCents", false));
-        deck.addCard(new LootCard("Bomb", "", "bomb", false));
-        deck.addCard(new LootCard("Charged Penny", "", "chargedPenny", false));
-        deck.addCard(new LootCard("Credit Card", "", "creditCard", false));
-        deck.addCard(new LootCard("Jera", "", "jera", false));
-        deck.addCard(new LootCard("Soul Heart", "", "soulHeart", false));
-        deck.addCard(new LootCard("A Penny!", "", "aPenny", false));
-        deck.addCard(new LootCard("2 Cents!", "", "twoCents", false));
-        deck.addCard(new LootCard("3 Cents!", "", "threeCents", false));
-        deck.addCard(new LootCard("4 Cents!", "", "fourCents", false));
-        deck.addCard(new LootCard("Bomb", "", "bomb", false));
-        deck.addCard(new LootCard("Charged Penny", "", "chargedPenny", false));
-        deck.addCard(new LootCard("Credit Card", "", "creditCard", false));
-        deck.addCard(new LootCard("Jera", "", "jera", false));
-        deck.addCard(new LootCard("Soul Heart", "", "soulHeart", false));
-        deck.addCard(new LootCard("A Penny!", "", "aPenny", false));
-        deck.addCard(new LootCard("2 Cents!", "", "twoCents", false));
-        deck.addCard(new LootCard("3 Cents!", "", "threeCents", false));
-        deck.addCard(new LootCard("4 Cents!", "", "fourCents", false));
-        deck.addCard(new LootCard("Bomb", "", "bomb", false));
-        deck.addCard(new LootCard("Charged Penny", "", "chargedPenny", false));
-        deck.addCard(new LootCard("Credit Card", "", "creditCard", false));
-        deck.addCard(new LootCard("Jera", "", "jera", false));
-        deck.addCard(new LootCard("Soul Heart", "", "soulHeart", false));
-        deck.addCard(new LootCard("A Penny!", "", "aPenny", false));
-        deck.addCard(new LootCard("2 Cents!", "", "twoCents", false));
-        deck.addCard(new LootCard("3 Cents!", "", "threeCents", false));
-        deck.addCard(new LootCard("4 Cents!", "", "fourCents", false));
-        deck.addCard(new LootCard("Bomb", "", "bomb", false));
-        deck.addCard(new LootCard("Charged Penny", "", "chargedPenny", false));
-        deck.addCard(new LootCard("Credit Card", "", "creditCard", false));
-        deck.addCard(new LootCard("Jera", "", "jera", false));
-        deck.addCard(new LootCard("Soul Heart", "", "soulHeart", false));
+        deck.addCard(new LootCard("A Penny! (Self explanatory)", "", "aPenny", false));
+        deck.addCard(new LootCard("2 Cents! (Self explanatory)", "", "twoCents", false));
+        deck.addCard(new LootCard("3 Cents! (Self explanatory)", "", "threeCents", false));
+        deck.addCard(new LootCard("4 Cents! (Self explanatory)", "", "fourCents", false));
+        deck.addCard(new LootCard("Bomb (+1 Damage this turn)", "", "bomb", false));
+        deck.addCard(new LootCard("Charged Penny (+1 Coin and Reset turn effects (can use loot, shop and fight again)", "", "chargedPenny", false));
+        deck.addCard(new LootCard("Credit Card (+10 coins)", "", "creditCard", false));
+        deck.addCard(new LootCard("Jera ( +1-3 Damage, +1-3 Health, +1-5 Coins)", "", "jera", false));
+        deck.addCard(new LootCard("Soul Heart (+2 Health)", "", "soulHeart", false));
+        deck.addCard(new LootCard("A Penny! (Self explanatory)", "", "aPenny", false));
+        deck.addCard(new LootCard("2 Cents! (Self explanatory)", "", "twoCents", false));
+        deck.addCard(new LootCard("3 Cents! (Self explanatory)", "", "threeCents", false));
+        deck.addCard(new LootCard("4 Cents! (Self explanatory)", "", "fourCents", false));
+        deck.addCard(new LootCard("Bomb (+1 Damage this turn)", "", "bomb", false));
+        deck.addCard(new LootCard("Charged Penny (+1 Coin and Reset turn effects (can use loot, shop and fight again)", "", "chargedPenny", false));
+        deck.addCard(new LootCard("Credit Card (+10 coins)", "", "creditCard", false));
+        deck.addCard(new LootCard("Jera ( +1-3 Damage, +1-3 Health, +1-5 Coins)", "", "jera", false));
+        deck.addCard(new LootCard("Soul Heart (+2 Health)", "", "soulHeart", false));
+        deck.addCard(new LootCard("A Penny! (Self explanatory)", "", "aPenny", false));
+        deck.addCard(new LootCard("2 Cents! (Self explanatory)", "", "twoCents", false));
+        deck.addCard(new LootCard("3 Cents! (Self explanatory)", "", "threeCents", false));
+        deck.addCard(new LootCard("4 Cents! (Self explanatory)", "", "fourCents", false));
+        deck.addCard(new LootCard("Bomb (+1 Damage this turn)", "", "bomb", false));
+        deck.addCard(new LootCard("Charged Penny (+1 Coin and Reset turn effects (can use loot, shop and fight again)", "", "chargedPenny", false));
+        deck.addCard(new LootCard("Credit Card (+10 coins)", "", "creditCard", false));
+        deck.addCard(new LootCard("Jera ( +1-3 Damage, +1-3 Health, +1-5 Coins)", "", "jera", false));
+        deck.addCard(new LootCard("Soul Heart (+2 Health)", "", "soulHeart", false));
 
         Collections.shuffle(deck.cards);
 
@@ -181,96 +171,97 @@ class FourSoulsGame {
 
     public void monsterDefeated(Player player, String monsterDefeatString) {
 
-        if (monsterDefeatString.equals("BlackBonyDefeat")) {
-            player.coins += 2;
-            if (!treasureDeck.cards.isEmpty()) {
-                TreasureCard item = treasureDeck.drawTreasure();
-                player.hand.add(item);
-                // Handle the treasure card as needed
+        switch (monsterDefeatString) {
+            case "BlackBonyDefeat" -> {
+                player.coins += 2;
+                if (!treasureDeck.cards.isEmpty()) {
+                    TreasureCard item = treasureDeck.drawTreasure();
+                    player.hand.add(item);
+                    // Handle the treasure card as needed
+                }
             }
-        } else if (monsterDefeatString.equals("BoomFlyDefeat")) {
-            player.souls += 1;
-        } else if (monsterDefeatString.equals("ClottyDefeat")) {
-            player.coins += 1;
-            if (!treasureDeck.cards.isEmpty()) {
-                TreasureCard item = treasureDeck.drawTreasure();
-                player.hand.add(item);
-                // Handle the treasure card as needed
+            case "BoomFlyDefeat" -> player.souls += 1;
+            case "ClottyDefeat" -> {
+                player.coins += 1;
+                if (!treasureDeck.cards.isEmpty()) {
+                    TreasureCard item = treasureDeck.drawTreasure();
+                    player.hand.add(item);
+                    // Handle the treasure card as needed
+                }
             }
-        } else if (monsterDefeatString.equals("BigSpiderDefeat")) {
-            player.coins += 1;
-            if (!treasureDeck.cards.isEmpty()) {
-                TreasureCard item = treasureDeck.drawTreasure();
-                player.hand.add(item);
-                // Handle the treasure card as needed
+            case "BigSpiderDefeat" -> {
+                player.coins += 1;
+                if (!treasureDeck.cards.isEmpty()) {
+                    TreasureCard item = treasureDeck.drawTreasure();
+                    player.hand.add(item);
+                    // Handle the treasure card as needed
+                }
             }
-        } else if (monsterDefeatString.equals("CodWormDefeat")) {
-            player.souls += 1;
-        } else if (monsterDefeatString.equals("ConjoinedFattyDefeat")) {
-            player.souls += 1;
-        } else if (monsterDefeatString.equals("DankGlobinDefeat")) {
-            player.coins += 2;
-            if (!treasureDeck.cards.isEmpty()) {
-                TreasureCard item = treasureDeck.drawTreasure();
-                player.hand.add(item);
-                // Handle the treasure card as needed
+            case "CodWormDefeat" -> player.souls += 1;
+            case "ConjoinedFattyDefeat" -> player.souls += 1;
+            case "DankGlobinDefeat" -> {
+                player.coins += 2;
+                if (!treasureDeck.cards.isEmpty()) {
+                    TreasureCard item = treasureDeck.drawTreasure();
+                    player.hand.add(item);
+                    // Handle the treasure card as needed
+                }
             }
-        } else if (monsterDefeatString.equals("DingaDefeat")) {
-            player.souls += 2;
-        } else if (monsterDefeatString.equals("DipDefeat")) {
-            player.coins += 1;
-            if (!treasureDeck.cards.isEmpty()) {
-                TreasureCard item = treasureDeck.drawTreasure();
-                player.hand.add(item);
-                // Handle the treasure card as needed
+            case "DingaDefeat" -> player.souls += 2;
+            case "DipDefeat" -> {
+                player.coins += 1;
+                if (!treasureDeck.cards.isEmpty()) {
+                    TreasureCard item = treasureDeck.drawTreasure();
+                    player.hand.add(item);
+                    // Handle the treasure card as needed
+                }
             }
-        } else if (monsterDefeatString.equals("DopleDefeat")) {
-            player.souls += 2;
-        } else if (monsterDefeatString.equals("EvilTwinDefeat")) {
-            player.coins += 2;
-            if (!treasureDeck.cards.isEmpty()) {
-                TreasureCard item = treasureDeck.drawTreasure();
-                player.hand.add(item);
-                // Handle the treasure card as needed
+            case "DopleDefeat" -> player.souls += 2;
+            case "EvilTwinDefeat" -> {
+                player.coins += 2;
+                if (!treasureDeck.cards.isEmpty()) {
+                    TreasureCard item = treasureDeck.drawTreasure();
+                    player.hand.add(item);
+                    // Handle the treasure card as needed
+                }
             }
-        } else if (monsterDefeatString.equals("FatBatDefeat")) {
-            player.souls += 1;
-        } else if (monsterDefeatString.equals("FattyDefeat")) {
-            player.coins += 1;
-            if (!treasureDeck.cards.isEmpty()) {
-                TreasureCard item = treasureDeck.drawTreasure();
-                player.hand.add(item);
-                // Handle the treasure card as needed
+            case "FatBatDefeat" -> player.souls += 1;
+            case "FattyDefeat" -> {
+                player.coins += 1;
+                if (!treasureDeck.cards.isEmpty()) {
+                    TreasureCard item = treasureDeck.drawTreasure();
+                    player.hand.add(item);
+                    // Handle the treasure card as needed
+                }
             }
-        } else if (monsterDefeatString.equals("FlyDefeat")) {
-            player.souls += 1;
-        } else if (monsterDefeatString.equals("GreedlingDefeat")) {
-            player.coins += 2;
-            if (!treasureDeck.cards.isEmpty()) {
-                TreasureCard item = treasureDeck.drawTreasure();
-                player.hand.add(item);
-                // Handle the treasure card as needed
+            case "FlyDefeat" -> player.souls += 1;
+            case "GreedlingDefeat" -> {
+                player.coins += 2;
+                if (!treasureDeck.cards.isEmpty()) {
+                    TreasureCard item = treasureDeck.drawTreasure();
+                    player.hand.add(item);
+                    // Handle the treasure card as needed
+                }
             }
-        } else if (monsterDefeatString.equals("HangerDefeat")) {
-            player.souls += 1;
-        } else if (monsterDefeatString.equals("HopperDefeat")) {
-            player.coins += 1;
-            if (!treasureDeck.cards.isEmpty()) {
-                TreasureCard item = treasureDeck.drawTreasure();
-                player.hand.add(item);
-                // Handle the treasure card as needed
+            case "HangerDefeat" -> player.souls += 1;
+            case "HopperDefeat" -> {
+                player.coins += 1;
+                if (!treasureDeck.cards.isEmpty()) {
+                    TreasureCard item = treasureDeck.drawTreasure();
+                    player.hand.add(item);
+                    // Handle the treasure card as needed
+                }
             }
-        } else if (monsterDefeatString.equals("HorfDefeat")) {
-            player.souls += 1;
-        } else if (monsterDefeatString.equals("KeeperHeadDefeat")) {
-            player.coins += 1;
-            if (!treasureDeck.cards.isEmpty()) {
-                TreasureCard item = treasureDeck.drawTreasure();
-                player.hand.add(item);
-                // Handle the treasure card as needed
+            case "HorfDefeat" -> player.souls += 1;
+            case "KeeperHeadDefeat" -> {
+                player.coins += 1;
+                if (!treasureDeck.cards.isEmpty()) {
+                    TreasureCard item = treasureDeck.drawTreasure();
+                    player.hand.add(item);
+                    // Handle the treasure card as needed
+                }
             }
-        } else if (monsterDefeatString.equals("LeaperDefeat")) {
-            player.souls += 2;
+            case "LeaperDefeat" -> player.souls += 2;
         }
         // Add more cases for other monsters' defeat strings and item rewards as needed.
     }
@@ -330,7 +321,7 @@ class FourSoulsGame {
 
                 if (card instanceof TreasureCard && !((TreasureCard) card).isActive) {
 
-                    Player.applyPredefinedPassiveEffect(currentPlayer, card.name);
+                    TreasureCard.applyPredefinedPassiveEffect(currentPlayer, card.name);
 
                 }
 
@@ -414,6 +405,16 @@ class FourSoulsGame {
 
                                     currentPlayer.damage = 999;
 
+                                }else if (RandomPandora == 4){
+
+                                    for (int i = 0; i < 3; i++) {
+
+                                        LootCard card = lootDeck.drawLoot();
+
+                                        currentPlayer.hand.add(card);
+
+                                    }
+
                                 } else if (RandomPandora == 5) {
 
                                     currentPlayer.coins += 9;
@@ -438,7 +439,7 @@ class FourSoulsGame {
 
                             } else if (cardName.equals("Host Hat") && !selectedTreasureCard.Used) {
 
-                                currentPlayer.health += 1;
+                                currentPlayer.health += 2;
 
                                 selectedTreasureCard.Used = true;
 
@@ -452,7 +453,7 @@ class FourSoulsGame {
 
                                     currentPlayer.hand.add(card);
 
-                                } else if (RandomMysterySack >= 3) {
+                                } else {
 
                                     currentPlayer.coins += 4;
 
@@ -474,7 +475,7 @@ class FourSoulsGame {
 
                                     currentPlayer.hand.add(card);
 
-                                } else if (RandomBookOfSin >= 5) {
+                                } else {
 
                                     currentPlayer.health += 1;
 
@@ -550,7 +551,7 @@ class FourSoulsGame {
 
                                     currentPlayer.hand.add(card);
 
-                                } else if (RandomDarkBum >= 5) {
+                                } else {
 
                                     currentPlayer.health -= 1;
 
@@ -666,7 +667,7 @@ class FourSoulsGame {
 
                     case 4:
                         // Attack a monster
-                        if (monstersInPlay.size() > 0) {
+                        if (!monstersInPlay.isEmpty()) {
                             if (currentPlayer.hadFoughtAnEnemie) {
                                 System.out.println(
                                         "You've already fought an enemy this turn. You cannot attack another enemy.");
