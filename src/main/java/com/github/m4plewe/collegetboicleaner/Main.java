@@ -1,6 +1,6 @@
 package com.github.m4plewe.collegetboicleaner;
-
 import java.util.*;
+
 class FourSoulsGame {
     public List<Player> players;
     public Deck treasureDeck;
@@ -8,6 +8,7 @@ class FourSoulsGame {
     public Deck lootDeck;
     public List<MonsterCard> monstersInPlay;
     public List<TreasureCard> shopItems;
+
     public FourSoulsGame(int numPlayers) {
 
         Scanner sc = new Scanner(System.in);
@@ -168,6 +169,20 @@ class FourSoulsGame {
         }
     }
 
+    public void Jera(Player player, int quantity) {
+
+        for (int i = 0; i < quantity; i++) {
+
+            LootCard card = lootDeck.drawLoot();
+            if (card != null) {
+                player.hand.add(card);
+                System.out.println("Duplicated: " + card.name);
+            } else {
+                System.out.println("No more loot cards to duplicate.");
+                break; // If there are no more loot cards to duplicate, exit the loop
+            }
+        }
+    }
 
     public void monsterDefeated(Player player, String monsterDefeatString) {
 
@@ -800,7 +815,7 @@ class FourSoulsGame {
         return false;
     }
 
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
 
         // Create a new game with a specified number of players.
 
