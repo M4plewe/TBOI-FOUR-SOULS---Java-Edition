@@ -1,4 +1,5 @@
 package com.github.m4plewe.collegetboicleaner;
+
 import java.util.*;
 
 class FourSoulsGame {
@@ -7,7 +8,9 @@ class FourSoulsGame {
     public Deck monsterDeck;
     public Deck lootDeck;
     public List<MonsterCard> monstersInPlay;
+    int montersInPlaySize = 2;
     public List<TreasureCard> shopItems;
+    int shopSize = 2;
 
     public FourSoulsGame(int numPlayers) {
 
@@ -188,9 +191,9 @@ class FourSoulsGame {
 
     }
 
-    public void restockShopAndAddMonster() {
+    public void restockShopAndAddMonster(int shopSize, int montersInPlaySize) {
         // Check if the shop needs restocking
-        if (shopItems.size() < 2) {
+        if (shopItems.size() < shopSize) {
             // Restock the shop with new items
             for (int i = shopItems.size(); i < 2; i++) {
                 TreasureCard item = treasureDeck.drawTreasure();
@@ -212,95 +215,100 @@ class FourSoulsGame {
 
         switch (monsterDefeatString) {
             case "BlackBonyDefeat" -> {
-                player.coins += 2;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
+
+                int blackBonyRandom = (int)(1 + Math.random()*6);
+
+                for (int i= 0; i < blackBonyRandom; i ++){
+
+                    Card card = lootDeck.draw();
+                    if (card != null) {
+                        player.hand.add(card);
+                    }
+
+                }
+
+            }
+            case "BoomFlyDefeat" -> {
+
+                player.coins += 4;
+
+
+
+            }
+
+            case "ClottyDefeat" -> player.coins += 4;
+
+            case "BigSpiderDefeat", "FattyDefeat" -> {
+
+                Card card = lootDeck.draw();
+                if (card != null)
+                    player.hand.add(card);
+
+            }
+            case "CodWormDefeat" -> player.coins += 3;
+            case "ConjoinedFattyDefeat" -> {
+
+                for (int i = 0; i < 2 ; i++){
+                    Card card = lootDeck.draw();
+                    if (card != null)
+                        player.hand.add(card);
                 }
             }
-            case "BoomFlyDefeat" -> player.souls += 1;
-            case "ClottyDefeat" -> {
-                player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
-            }
-            case "BigSpiderDefeat" -> {
-                player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
-            }
-            case "CodWormDefeat" -> player.souls += 1;
-            case "ConjoinedFattyDefeat" -> player.souls += 1;
             case "DankGlobinDefeat" -> {
-                player.coins += 2;
+
+                for (int i = 0; i < 2 ; i++){
+                    Card card = lootDeck.draw();
+                    if (card != null)
+                        player.hand.add(card);
+                }
+
+                for (int i = 0; i < 2 ; i++) {
+                    for (Card card : player.hand) {
+                        if (card instanceof LootCard) {
+                            player.hand.remove(card);
+                            break; // Remove only one LootCard
+                        }
+                    }
+                }
+            }
+            case "DingaDefeat", "KeeperHeadDefeat" -> {
+
+                int CoinsRandom =(int) (1+Math.random()*6);
+
+                player.coins += CoinsRandom;
+
+            }
+            case "DipDefeat" -> player.coins += 1;
+
+
+            case "DopleDefeat" -> player.coins += 7;
+
+            case "EvilTwinDefeat", "FatBatDefeat" -> {
+
                 if (!treasureDeck.cards.isEmpty()) {
                     TreasureCard item = treasureDeck.drawTreasure();
                     player.hand.add(item);
                     // Handle the treasure card as needed
                 }
             }
-            case "DingaDefeat" -> player.souls += 2;
-            case "DipDefeat" -> {
+            case "FlyDefeat" ->
+
                 player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
-            }
-            case "DopleDefeat" -> player.souls += 2;
-            case "EvilTwinDefeat" -> {
-                player.coins += 2;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
-            }
-            case "FatBatDefeat" -> player.souls += 1;
-            case "FattyDefeat" -> {
-                player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
-            }
-            case "FlyDefeat" -> player.souls += 1;
-            case "GreedlingDefeat" -> {
-                player.coins += 2;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
-            }
-            case "HangerDefeat" -> player.souls += 1;
+
+
+            case "GreedlingDefeat" ->
+
+                player.coins += 7;
+
+
+            case "HangerDefeat" -> player.coins += 7;
             case "HopperDefeat" -> {
-                player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
+                player.coins += 3;
+
             }
-            case "HorfDefeat" -> player.souls += 1;
-            case "KeeperHeadDefeat" -> {
-                player.coins += 1;
-                if (!treasureDeck.cards.isEmpty()) {
-                    TreasureCard item = treasureDeck.drawTreasure();
-                    player.hand.add(item);
-                    // Handle the treasure card as needed
-                }
-            }
-            case "LeaperDefeat" -> player.souls += 2;
+            case "HorfDefeat" -> player.coins += 3;
+
+            case "LeaperDefeat" -> player.coins += 5;
         }
         // Add more cases for other monsters' defeat strings and item rewards as needed.
     }
@@ -326,7 +334,7 @@ class FourSoulsGame {
             Player currentPlayer = players.get(currentPlayerIndex);
             boolean endTurn = false;
 
-            restockShopAndAddMonster();
+            restockShopAndAddMonster(shopSize, montersInPlaySize);
 
             // Reset boolean flags at the start of the player's turn
             currentPlayer.usedLootCardThisTurn = false;

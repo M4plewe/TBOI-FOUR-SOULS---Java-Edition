@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f1849a3-ddd0-4333-8f03-04ae7f9e3682" name="Changes" comment=".">
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_28_2023_9_27_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_28_2023_9_27_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/LootCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/LootCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/TreasureCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/TreasureCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,24 +55,26 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2XPt70ZbmuPKoRVJvgQWEnh7uu8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maple/IdeaProjects/CollageTBOICleaner&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/maple/IdeaProjects/CollageTBOICleaner",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="FourSoulsGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.m4plewe.collegetboicleaner.FourSoulsGame" />
@@ -106,6 +107,7 @@
       <workItem from="1698545025557" duration="2658000" />
       <workItem from="1698547715061" duration="10799000" />
       <workItem from="1698588273298" duration="3088000" />
+      <workItem from="1698794521042" duration="2522000" />
     </task>
     <task id="LOCAL-00001" summary="Make the cards also have a little description for new players or ppl that have never played the game knwo what the cards do, also i changed what some cards do due that i changed their original function lol">
       <option name="closed" value="true" />
