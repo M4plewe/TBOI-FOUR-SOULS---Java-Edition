@@ -10,13 +10,14 @@ public class TreasureCard extends Card {
     public TreasureCard(String name, boolean isActive, String id) {
         super(name, "Treasure");
         this.isActive = isActive;
+        this.id = id;
 
     }
 
-    public static void applyPredefinedPassiveEffect(Player currentPlayer, String name) {
+    public static void applyPredefinedPassiveEffect(Player currentPlayer, String id) {
 
 
-        switch (name) {
+        switch (id) {
             case "Synthoil":
                 currentPlayer.damage += 1;
                 break;
@@ -87,12 +88,9 @@ public class TreasureCard extends Card {
         }
     }
 
-    public void playTreasure(Player currentPlayer, int cardIndex, Deck lootDeck, Deck treasureDeck, MonsterCard selectedMonster) {
+    public void playTreasure(Player currentPlayer, TreasureCard treasureCard, Deck lootDeck, Deck treasureDeck, MonsterCard selectedMonster) {
         // Implement the play logic for Loot cards
 
-        if (cardIndex >= 0 && cardIndex < currentPlayer.hand.size()) {
-            Card selectedTreasureCard = currentPlayer.hand.get(cardIndex);
-            if (selectedTreasureCard instanceof TreasureCard treasureCard && !treasureCard.Used) {
 
                 switch (treasureCard.id) {
                     case "TheChest":
@@ -121,7 +119,7 @@ public class TreasureCard extends Card {
                             case 6:
                                 currentPlayer.souls += 1;
                                 System.out.println("Player got +1 souls, item destroyed");
-                                currentPlayer.hand.remove(selectedTreasureCard);
+                                currentPlayer.hand.remove(treasureCard);
                                 break;
                         }
                         treasureCard.Used = true;
@@ -231,14 +229,14 @@ public class TreasureCard extends Card {
                         currentPlayer.hand.remove(treasureCard);
                         break;
                     case "ForgetMeNow":
-
-                        currentPlayer.hand.remove(treasureCard);
                         System.out.println(currentPlayer+" just fucked up everyone game");
                         System.out.println("eitherway, how many ppl will continue playing?");
+                        currentPlayer.hand.remove(treasureCard);
                         Scanner sc = new Scanner(System.in);
                         int players = sc.nextInt();
-                        FourSoulsGame game = new FourSoulsGame(players);
-                        game.startGame();
+                        FourSoulsGame newgame = new FourSoulsGame(players);
+                        newgame.startGame();
+                        break;
 
                     case "RKey" :
 
@@ -258,6 +256,3 @@ public class TreasureCard extends Card {
                 }
             }
         }
-    }
-
-}

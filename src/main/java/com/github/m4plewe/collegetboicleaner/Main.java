@@ -163,9 +163,9 @@ class FourSoulsGame {
         deck.addCard(new TreasureCard("Battery Bum: Reactivate a used active card per 4$", true, "BatteryBum"));
         deck.addCard(new TreasureCard("Dark Bum: Random effect (+3$, +1 Loot, -1 Health)", true, "DarkBum"));
         deck.addCard(new TreasureCard("Plan C: Defeat all monsters and u die with them (Destroys on use)", true, "PlanC"));
-        deck.addCard(new TreasureCard("Forget Me Now: Restart the whole game", false, "ForgetMeNow"));
-        deck.addCard(new TreasureCard("R Key: nothing better than rage quit (crash the game)", false, "RKey"));
-        deck.addCard(new TreasureCard("A Quarter: we'all love inflation", false, ""));
+        deck.addCard(new TreasureCard("Forget Me Now: Restart the whole game", true, "ForgetMeNow"));
+        deck.addCard(new TreasureCard("R Key: nothing better than rage quit (crash the game)", true, "RKey"));
+        deck.addCard(new TreasureCard("A Quarter: we'all love inflation", true, ""));
 
         Collections.shuffle(deck.cards);
 
@@ -268,13 +268,10 @@ class FourSoulsGame {
             }
 
             for (Card card : currentPlayer.hand) {
-
                 if (card instanceof TreasureCard && !((TreasureCard) card).isActive) {
-
-                    TreasureCard.applyPredefinedPassiveEffect(currentPlayer, card.name);
-
+                    String name = ((TreasureCard) card).id;
+                    TreasureCard.applyPredefinedPassiveEffect(currentPlayer, name);
                 }
-
             }
 
             do {
@@ -331,12 +328,10 @@ class FourSoulsGame {
                         if (cardIndexToActivate > 0 && cardIndexToActivate <= currentPlayer.hand.size()) {
                             TreasureCard selectedTreasureCard = (TreasureCard) currentPlayer.hand
                                     .get(cardIndexToActivate - 1);
-                            String cardName = selectedTreasureCard.name;
-
 
                             for (MonsterCard selectedMonster : monstersInPlay) {
 
-                                selectedTreasureCard.playTreasure(currentPlayer,cardIndexToActivate - 1, lootDeck, treasureDeck, selectedMonster);
+                                selectedTreasureCard.playTreasure(currentPlayer,selectedTreasureCard, lootDeck, treasureDeck, selectedMonster);
 
                                 break;
                             }
