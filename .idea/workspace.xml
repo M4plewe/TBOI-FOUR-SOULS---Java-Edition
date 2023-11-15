@@ -7,8 +7,6 @@
     <list default="true" id="9f1849a3-ddd0-4333-8f03-04ae7f9e3682" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/MonsterCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/MonsterCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/TreasureCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/TreasureCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,21 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maple/IdeaProjects/CollageTBOICleaner&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/maple/Downloads/libgdx-inGameConsole-master/libgdx-inGameConsole-master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.com.github.m4plewe.collegetboicleaner.FourSoulsGame">
     <configuration name="FourSoulsGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.m4plewe.ui.FourSoulsGame" />
@@ -127,7 +125,7 @@
       <workItem from="1699749220429" duration="881000" />
       <workItem from="1700008027113" duration="5594000" />
       <workItem from="1700017968146" duration="3027000" />
-      <workItem from="1700058745971" duration="4905000" />
+      <workItem from="1700058745971" duration="6296000" />
     </task>
     <task id="LOCAL-00001" summary="Make the cards also have a little description for new players or ppl that have never played the game knwo what the cards do, also i changed what some cards do due that i changed their original function lol">
       <option name="closed" value="true" />
@@ -265,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700018137711</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary=".">
+      <option name="closed" value="true" />
+      <created>1700063682957</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1700063682957</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

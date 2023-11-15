@@ -34,7 +34,11 @@ public class LootCard extends Card {
                             player.boughtItemThisTurn = false;
                             player.hadFoughtAnEnemie = false;
                         }
-                        case "creditCard" -> player.coins += 10;
+                        case "creditCard" -> {
+
+                            int randomCoins = (int) (1+Math.random()*5);
+                            player.coins += 10;
+                        }
                         case "jera" -> {
                             player.coins += (int) (1 + Math.random() * 5);
                             player.damage += (int) (Math.random() * 3);

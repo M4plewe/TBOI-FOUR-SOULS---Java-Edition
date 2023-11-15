@@ -56,6 +56,34 @@ public class TreasureCard extends Card {
             case "Lard":
                 currentPlayer.health += 2;
                 break;
+            case "Euthanasia":
+                int rng = (int) (1+Math.random()*2);
+
+                if(rng == 1){
+                    currentPlayer.damage = 999;
+                }
+                break;
+
+            case "Polyphemus":
+                currentPlayer.damage += 2;
+                break;
+            case "Abaddon":
+
+                currentPlayer.damage += 3;
+                break;
+
+            case "ThreeDollarBill":
+
+                rng = (int) (1+Math.random()*2);
+
+                switch (rng) {
+                    case 4, 5:
+                        currentPlayer.health += 1;
+                    case 6:
+                        currentPlayer.damage += 2;
+                }
+                break;
+
         }
     }
 
@@ -64,9 +92,9 @@ public class TreasureCard extends Card {
 
         if (cardIndex >= 0 && cardIndex < currentPlayer.hand.size()) {
             Card selectedTreasureCard = currentPlayer.hand.get(cardIndex);
-
             if (selectedTreasureCard instanceof TreasureCard treasureCard && !treasureCard.Used) {
-                switch (treasureCard.name) {
+
+                switch (treasureCard.id) {
                     case "TheChest":
                         currentPlayer.souls += 1;
                         break;
@@ -202,6 +230,31 @@ public class TreasureCard extends Card {
                         System.out.println("Plan C defeated: " + selectedMonster.name);
                         currentPlayer.hand.remove(treasureCard);
                         break;
+                    case "ForgetMeNow":
+
+                        currentPlayer.hand.remove(treasureCard);
+                        System.out.println(currentPlayer+" just fucked up everyone game");
+                        System.out.println("eitherway, how many ppl will continue playing?");
+                        Scanner sc = new Scanner(System.in);
+                        int players = sc.nextInt();
+                        FourSoulsGame game = new FourSoulsGame(players);
+                        game.startGame();
+
+                    case "RKey" :
+
+                        currentPlayer.hand.remove(treasureCard);
+                        for (int i = 0; i < i+2 ; i++) {
+
+                            System.out.println("FUCK YOU ALL");
+                        }
+                        break;
+
+                    case "AQuarter":
+
+                        currentPlayer.hand.remove(treasureCard);
+                        currentPlayer.coins += 25;
+                    break;
+
                 }
             }
         }

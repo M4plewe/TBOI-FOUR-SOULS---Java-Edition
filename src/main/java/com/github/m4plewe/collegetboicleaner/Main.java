@@ -141,10 +141,15 @@ class FourSoulsGame {
         deck.addCard(new TreasureCard("Dinner: +1 Health", false, "Dinner"));
         deck.addCard(new TreasureCard("Lard: +2 Health", false, "Lard"));
         deck.addCard(new TreasureCard("Dry Baby: Blocks enemy attacks 25% chance", false, "DryBaby"));
-        deck.addCard(new TreasureCard("Empty Vessel: +2 and +2 if less than 5 Cards on Hand else +1 Damage and +1 Coins per turn", false, "EmptyVassel"));
+        deck.addCard(new TreasureCard("Empty Vessel: +2 damage and +2 health if less than 3 Cards on Hand else +1 Damage and +1 Coins per turn", false, "EmptyVassel"));
         deck.addCard(new TreasureCard("Greed's Gullet: +3 coins each turn", false, "GreedsGullet"));
         deck.addCard(new TreasureCard("Meat!: +1 Health", false, "Meat"));
         deck.addCard(new TreasureCard("Synthoil: +1 Damage", false, "Synthoil"));
+        deck.addCard(new TreasureCard("Euthanasia: 5% chance get 999 damage", false, "Euthanasia"));
+        deck.addCard(new TreasureCard("Polyphemus: +2 Damage", false, "Polyphemus"));
+        deck.addCard(new TreasureCard("Abaddon: +3 damage", false, "Abaddon"));
+        deck.addCard(new TreasureCard("Three Dollar Bill: (nothing, +1 health, +2 damage)", false, ""));
+
 
 // Active Treasure Cards
 
@@ -158,7 +163,9 @@ class FourSoulsGame {
         deck.addCard(new TreasureCard("Battery Bum: Reactivate a used active card per 4$", true, "BatteryBum"));
         deck.addCard(new TreasureCard("Dark Bum: Random effect (+3$, +1 Loot, -1 Health)", true, "DarkBum"));
         deck.addCard(new TreasureCard("Plan C: Defeat all monsters and u die with them (Destroys on use)", true, "PlanC"));
-
+        deck.addCard(new TreasureCard("Forget Me Now: Restart the whole game", false, "ForgetMeNow"));
+        deck.addCard(new TreasureCard("R Key: nothing better than rage quit (crash the game)", false, "RKey"));
+        deck.addCard(new TreasureCard("A Quarter: we'all love inflation", false, ""));
 
         Collections.shuffle(deck.cards);
 
@@ -175,7 +182,7 @@ class FourSoulsGame {
         deck.addCard(new LootCard("4 Cents! (Self explanatory)", "", "fourCents", false));
         deck.addCard(new LootCard("Bomb (+1 Damage this turn)", "", "bomb", false));
         deck.addCard(new LootCard("Charged Penny (+1 Coin and Reset turn effects (can use loot, shop and fight again)", "", "chargedPenny", false));
-        deck.addCard(new LootCard("Credit Card (+10 coins)", "", "creditCard", false));
+        deck.addCard(new LootCard("Credit Card (+1-10 coins)", "", "creditCard", false));
         deck.addCard(new LootCard("Jera ( +1-3 Damage, +1-3 Health, +1-5 Coins)", "", "jera", false));
         deck.addCard(new LootCard("Soul Heart (+2 Health)", "", "soulHeart", false));
 
