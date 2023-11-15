@@ -5,26 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f1849a3-ddd0-4333-8f03-04ae7f9e3682" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_28_2023_9_27_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_28_2023_9_27_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/github/m4plewe/collegetboicleaner/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/github/m4plewe/collegetboicleaner/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/github/m4plewe/collegetboicleaner/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/github/m4plewe/collegetboicleaner/Deck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/github/m4plewe/collegetboicleaner/FourSoulsGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/github/m4plewe/collegetboicleaner/FourSoulsGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/github/m4plewe/collegetboicleaner/LootCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/github/m4plewe/collegetboicleaner/LootCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/github/m4plewe/collegetboicleaner/TreasureCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/github/m4plewe/collegetboicleaner/TreasureCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/MonsterCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/MonsterCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/TreasureCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/TreasureCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +126,8 @@
       <workItem from="1699476251597" duration="3502000" />
       <workItem from="1699749220429" duration="881000" />
       <workItem from="1700008027113" duration="5594000" />
+      <workItem from="1700017968146" duration="3027000" />
+      <workItem from="1700058745971" duration="4905000" />
     </task>
     <task id="LOCAL-00001" summary="Make the cards also have a little description for new players or ppl that have never played the game knwo what the cards do, also i changed what some cards do due that i changed their original function lol">
       <option name="closed" value="true" />
@@ -256,7 +241,31 @@
       <option name="project" value="LOCAL" />
       <updated>1698552207179</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary=".">
+      <option name="closed" value="true" />
+      <created>1700018029160</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700018029160</updated>
+    </task>
+    <task id="LOCAL-00016" summary=".">
+      <option name="closed" value="true" />
+      <created>1700018117009</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700018117009</updated>
+    </task>
+    <task id="LOCAL-00017" summary=".">
+      <option name="closed" value="true" />
+      <created>1700018137711</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1700018137711</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

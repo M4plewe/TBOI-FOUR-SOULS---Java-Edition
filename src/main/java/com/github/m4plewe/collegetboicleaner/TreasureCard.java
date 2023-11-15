@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class TreasureCard extends Card {
     public boolean isActive;
     public boolean Used;
-
-    public TreasureCard(String name, boolean isActive) {
+    public String id;
+    public TreasureCard(String name, boolean isActive, String id) {
         super(name, "Treasure");
         this.isActive = isActive;
 
@@ -17,19 +17,19 @@ public class TreasureCard extends Card {
 
 
         switch (name) {
-            case "Synthoil: +1 Damage", "Brimstone: +1 Damage":
+            case "Synthoil":
                 currentPlayer.damage += 1;
                 break;
 
-            case "Meat!: +1 Health":
+            case "Meat":
                 currentPlayer.health += 1;
                 break;
 
-            case "Greed's Gullet: +3 coins each turn":
+            case "GreedsGullet":
                 currentPlayer.coins += 3;
                 break;
 
-            case "Empty Vessel: +2 and +2 if less than 5 Cards on Hand else +1 Damage and +1 Coins per turn":
+            case "EmptyVessel":
                 if (currentPlayer.hand.size() >= 5) {
                     currentPlayer.damage += 1;
                     currentPlayer.coins += 1;
@@ -39,21 +39,21 @@ public class TreasureCard extends Card {
                 }
                 break;
 
-            case "Sausage: +1 Health +1 Damage":
+            case "Sausage":
                 currentPlayer.health += 1;
                 currentPlayer.damage += 1;
                 break;
 
-            case "Sacred Heart: +2 Health and +1 Damage":
+            case "Sacred Heart":
                 currentPlayer.health += 2;
                 currentPlayer.damage += 1;
                 break;
 
-            case "Dinner: +1 Health":
+            case "Dinner":
                 currentPlayer.health += 1;
                 break;
 
-            case "Lard: +2 Health":
+            case "Lard":
                 currentPlayer.health += 2;
                 break;
         }
@@ -67,11 +67,11 @@ public class TreasureCard extends Card {
 
             if (selectedTreasureCard instanceof TreasureCard treasureCard && !treasureCard.Used) {
                 switch (treasureCard.name) {
-                    case "The Chest: Gain a Soul (Destroys on use)":
+                    case "TheChest":
                         currentPlayer.souls += 1;
                         break;
 
-                    case "Pandora's Box: Random effect (+1$, +6$, +999 damage, +3 Loot, +9$, +1 Souls (Destroys on use))":
+                    case "PandorasBox":
                         int RandomPandora = (int) (1 + Math.random() * 6);
                         switch (RandomPandora) {
                             case 1:
@@ -99,19 +99,19 @@ public class TreasureCard extends Card {
                         treasureCard.Used = true;
                         break;
 
-                    case "The Battery: Reset turn effects (can use loot, shop and fight again)":
+                    case "TheBattery":
                         currentPlayer.boughtItemThisTurn = false;
                         currentPlayer.hadFoughtAnEnemie = false;
                         currentPlayer.usedLootCardThisTurn = false;
                         treasureCard.Used = true;
                         break;
 
-                    case "Host Hat: +2 Health":
+                    case "HostHat":
                         currentPlayer.health += 2;
                         treasureCard.Used = true;
                         break;
 
-                    case "Mystery Sack: Random effect (+1 Loot, +4$)":
+                    case "MysterySack":
                         int RandomMysterySack = (int) (1 + Math.random() * 6);
                         if (RandomMysterySack <= 2) {
                             Card card = lootDeck.draw();
@@ -124,7 +124,7 @@ public class TreasureCard extends Card {
                         treasureCard.Used = true;
                         break;
 
-                    case "Book of Sin: Random effect (+1 $, +1 Loot, +1 Heart)":
+                    case "BookOfSin":
                         int RandomBookOfSin = (int) (1 + Math.random() * 6);
                         if (RandomBookOfSin <= 2) {
                             currentPlayer.coins += 1;
@@ -140,13 +140,13 @@ public class TreasureCard extends Card {
                         treasureCard.Used = true;
                         break;
 
-                    case "Chaos Card: Change monster stats":
+                    case "ChaosCard":
                         selectedMonster.health = (int) (1 + Math.random() * 10);
                         selectedMonster.damage = (int) (1 + Math.random() * 10);
                         selectedMonster.evasion = (int) (1 + Math.random() * 6);
                         break;
 
-                    case "Battery Bum: Reactivate a used active card per 4$":
+                    case "BatteryBum":
                         if (currentPlayer.coins >= 4) {
 
                             for (int i = 0; i < currentPlayer.hand.size(); i++) {
@@ -156,7 +156,6 @@ public class TreasureCard extends Card {
                                     System.out.println((i + 1) + ". " + card.name);
                                 }
                             }
-
                             System.out.println("Enter the number of the card to reactivate (or 0 to cancel):");
                             Scanner sc = new Scanner(System.in);
                             int cardIndexToReactivate = sc.nextInt();
@@ -178,13 +177,12 @@ public class TreasureCard extends Card {
                             } else if (cardIndexToReactivate != 0) {
                                 System.out.println("Invalid card selection.");
                             }
-
                         } else {
                             System.out.println("You don't have enough coins for Bum.");
                         }
                         break;
 
-                    case "Dark Bum: Random effect (+3$, +1 Loot, -1 Health)":
+                    case "DarkBum":
                         int RandomDarkBum = (int) (1 + Math.random() * 6);
                         if (RandomDarkBum <= 2) {
                             currentPlayer.coins += 3;
@@ -199,7 +197,7 @@ public class TreasureCard extends Card {
                         treasureCard.Used = true;
                         break;
 
-                    case "Plan C: 'Defeat' a monster (Destroys on use)":
+                    case "PlanC":
                         selectedMonster.monsterDefeated(currentPlayer, selectedMonster.defeat, lootDeck, treasureDeck);
                         System.out.println("Plan C defeated: " + selectedMonster.name);
                         currentPlayer.hand.remove(treasureCard);
