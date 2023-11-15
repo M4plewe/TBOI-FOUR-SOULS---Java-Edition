@@ -17,8 +17,7 @@ public class TreasureCard extends Card {
 
 
         switch (name) {
-            case "Synthoil: +1 Damage":
-            case "Brimstone: +1 Damage":
+            case "Synthoil: +1 Damage", "Brimstone: +1 Damage":
                 currentPlayer.damage += 1;
                 break;
 
@@ -33,6 +32,7 @@ public class TreasureCard extends Card {
             case "Empty Vessel: +2 and +2 if less than 5 Cards on Hand else +1 Damage and +1 Coins per turn":
                 if (currentPlayer.hand.size() >= 3) {
                     currentPlayer.damage += 1;
+                    currentPlayer.coins += 1;
                 } else {
                     currentPlayer.damage += 2;
                     currentPlayer.coins += 2;
