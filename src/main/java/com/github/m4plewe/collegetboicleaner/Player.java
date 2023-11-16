@@ -17,9 +17,9 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
-        this.coins = 1000; // Starting coins
-        this.health = 2000;
-        this.damage = 10000;
+        this.coins = 3; // Starting coins
+        this.health = 2;
+        this.damage = 1;
         this.hand = new ArrayList<>();
         this.souls = 0;
         this.boughtItemThisTurn = false;
