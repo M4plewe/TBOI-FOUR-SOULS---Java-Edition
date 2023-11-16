@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f1849a3-ddd0-4333-8f03-04ae7f9e3682" name="Changes" comment="." />
+    <list default="true" id="9f1849a3-ddd0-4333-8f03-04ae7f9e3682" name="Changes" comment="Forgor to explain what have been doing all this time with the commits, uhhh eihterway just fixed the lack of lootcards in the game">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/TreasureCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/TreasureCard.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +39,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -124,6 +129,8 @@
       <workItem from="1700017968146" duration="3027000" />
       <workItem from="1700058745971" duration="12381000" />
       <workItem from="1700107254077" duration="105000" />
+      <workItem from="1700107519629" duration="255000" />
+      <workItem from="1700107867748" duration="1992000" />
     </task>
     <task id="LOCAL-00001" summary="Make the cards also have a little description for new players or ppl that have never played the game knwo what the cards do, also i changed what some cards do due that i changed their original function lol">
       <option name="closed" value="true" />
@@ -293,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700107282419</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Forgor to explain what have been doing all this time with the commits, uhhh eihterway just fixed the lack of lootcards in the game">
+      <option name="closed" value="true" />
+      <created>1700107699843</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1700107699843</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +328,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Make the cards also have a little description for new players or ppl that have never played the game knwo what the cards do, also i changed what some cards do due that i changed their original function lol" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="Forgor to explain what have been doing all this time with the commits, uhhh eihterway just fixed the lack of lootcards in the game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Forgor to explain what have been doing all this time with the commits, uhhh eihterway just fixed the lack of lootcards in the game" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CollageTBOICleaner$FourSoulsGame.ic" NAME="FourSoulsGame Coverage Results" MODIFIED="1698550641984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

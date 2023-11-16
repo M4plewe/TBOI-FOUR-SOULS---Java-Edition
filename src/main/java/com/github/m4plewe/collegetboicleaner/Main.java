@@ -148,7 +148,7 @@ class FourSoulsGame {
         deck.addCard(new TreasureCard("Euthanasia: 5% chance get 999 damage", false, "Euthanasia"));
         deck.addCard(new TreasureCard("Polyphemus: +2 Damage", false, "Polyphemus"));
         deck.addCard(new TreasureCard("Abaddon: +3 damage", false, "Abaddon"));
-        deck.addCard(new TreasureCard("Three Dollar Bill: (nothing, +1 health, +2 damage)", false, ""));
+        deck.addCard(new TreasureCard("Three Dollar Bill: (nothing, +1 health, +2 damage)", false, "ThreeDollarBill"));
 
 
 // Active Treasure Cards
@@ -165,7 +165,7 @@ class FourSoulsGame {
         deck.addCard(new TreasureCard("Plan C: Defeat all monsters and u die with them (Destroys on use)", true, "PlanC"));
         deck.addCard(new TreasureCard("Forget Me Now: Restart the whole game", true, "ForgetMeNow"));
         deck.addCard(new TreasureCard("R Key: nothing better than rage quit (crash the game)", true, "RKey"));
-        deck.addCard(new TreasureCard("A Quarter: we'all love inflation", true, ""));
+        deck.addCard(new TreasureCard("A Quarter: +25 Coins we'all love inflation", true, "AQuarter"));
 
         Collections.shuffle(deck.cards);
 
@@ -504,7 +504,8 @@ class FourSoulsGame {
                                             boolean playerHasDryBaby = false; // Initialize the flag as false
 
                                             for (Card treasureCard : currentPlayer.hand) {
-                                                if (treasureCard.name.equals("Dry Baby: Blocks enemy attacks 25% chance")) {
+
+                                                if (treasureCard.id.equals("DryBaby")) {
                                                     playerHasDryBaby = true;
                                                     break; // You can exit the loop early since you've found "Dry Baby"
                                                 }

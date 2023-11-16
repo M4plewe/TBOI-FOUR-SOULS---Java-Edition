@@ -58,7 +58,7 @@ public class TreasureCard extends Card {
                 currentPlayer.health += 2;
                 break;
             case "Euthanasia":
-                int rng = (int) (1+Math.random()*2);
+                int rng = (int) (1+Math.random()*20);
 
                 if(rng == 1){
                     currentPlayer.damage = 999;
@@ -83,6 +83,10 @@ public class TreasureCard extends Card {
                     case 6:
                         currentPlayer.damage += 2;
                 }
+                break;
+            case "Brimstone":
+                currentPlayer.damage += 1;
+
                 break;
 
         }
@@ -248,9 +252,8 @@ public class TreasureCard extends Card {
                         break;
 
                     case "AQuarter":
-
-                        currentPlayer.hand.remove(treasureCard);
                         currentPlayer.coins += 25;
+                        currentPlayer.hand.remove(treasureCard);
                     break;
 
                 }
