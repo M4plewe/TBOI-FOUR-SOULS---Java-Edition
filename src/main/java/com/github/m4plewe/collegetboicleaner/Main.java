@@ -504,8 +504,8 @@ class FourSoulsGame {
                                             boolean playerHasDryBaby = false; // Initialize the flag as false
 
                                             for (Card treasureCard : currentPlayer.hand) {
-
-                                                if (treasureCard.id.equals("DryBaby")) {
+                                                
+                                                if (treasureCard instanceof TreasureCard && ((TreasureCard) treasureCard).id.equals("DryBaby")) {
                                                     playerHasDryBaby = true;
                                                     break; // You can exit the loop early since you've found "Dry Baby"
                                                 }

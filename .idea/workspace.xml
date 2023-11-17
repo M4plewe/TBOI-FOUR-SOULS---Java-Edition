@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f1849a3-ddd0-4333-8f03-04ae7f9e3682" name="Changes" comment="Forgor to explain what have been doing all this time with the commits, uhhh eihterway just fixed the lack of lootcards in the game">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/TreasureCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/m4plewe/collegetboicleaner/TreasureCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +99,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.com.github.m4plewe.collegetboicleaner.FourSoulsGame" />
@@ -131,6 +142,7 @@
       <workItem from="1700107254077" duration="105000" />
       <workItem from="1700107519629" duration="255000" />
       <workItem from="1700107867748" duration="1992000" />
+      <workItem from="1700249012485" duration="455000" />
     </task>
     <task id="LOCAL-00001" summary="Make the cards also have a little description for new players or ppl that have never played the game knwo what the cards do, also i changed what some cards do due that i changed their original function lol">
       <option name="closed" value="true" />
